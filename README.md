@@ -123,21 +123,27 @@ ReCALL Lite is built exactly for that.
 
 # 👨‍💻 **How Developers Can Use ReCALL Lite**
 
-A simple example:
+You can install ReCALL Lite directly from PyPI:
+
+```bash
+pip install lite-recall
+```
+
+Once installed, here’s a simple example showing how ReCALL Lite stores and retrieves memory:
 
 ```python
-from recall_lite import recall_lite, LiteAgent, GeminiAPIConnector
+from lite_recall import recall_lite, LiteAgent, GeminiAPIConnector
 
 # Initialize your LLM model (Gemini, OpenAI, HF, etc.)
 model = GeminiAPIConnector(
-    api_key="YOUR_KEY",
-    model_version="gemma-3n-e4b-it"
+    api_key="YOUR_KEY",                # Replace with your Gemini API key
+    model_version="gemma-3n-e4b-it"    # Any supported Gemini/Gemma model
 )
 
 # Initialize the memory system
 memory = recall_lite(
     memory_prefix="recall_lite",
-    summarizer_model=model
+    summarizer_model=model             # Optional: enables summary-based compression
 )
 
 # Create an agent that combines memory + LLM
@@ -146,11 +152,10 @@ agent = LiteAgent(memory, model)
 # Store a memory
 print(agent.process("My name is Krishna."))
 
-# Ask something later -> ReCALL Lite retrieves stored memory automatically
+# Ask something later → ReCALL Lite retrieves stored memory automatically
 print(agent.process("What is my name?"))
-
-
 ```
+
 
 ReCALL Lite handles:
 
