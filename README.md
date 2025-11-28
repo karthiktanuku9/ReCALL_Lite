@@ -126,10 +126,10 @@ ReCALL Lite is built exactly for that.
 A simple example:
 
 ```python
-from recall_lite import ReCALLLite, LiteAgent, GeminiAPIConnector
+from recall_lite import recall_lite, LiteAgent, GeminiAPIConnector
 
 model = GeminiAPIConnector(api_key="YOUR_KEY", model_version="gemma-3n-e4b-it")
-memory = ReCALLLite(memory_prefix="recall_lite", summarizer_model=model)
+memory = recall_lite(memory_prefix="recall_lite", summarizer_model=model)
 agent = LiteAgent(memory, model)
 
 response = agent.process("My name is Krishna.")
