@@ -126,7 +126,7 @@ ReCALL Lite is built exactly for that.
 A simple example:
 
 ```python
-from recall_lite import ReCALLLite, LiteAgent, GeminiAPIConnector
+from recall_lite import recall_lite, LiteAgent, GeminiAPIConnector
 
 # Initialize your LLM model (Gemini, OpenAI, HF, etc.)
 model = GeminiAPIConnector(
@@ -135,7 +135,7 @@ model = GeminiAPIConnector(
 )
 
 # Initialize the memory system
-memory = ReCALLLite(
+memory = recall_lite(
     memory_prefix="recall_lite",
     summarizer_model=model
 )
