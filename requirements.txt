@@ -1,0 +1,9 @@
+numpy
+pandas
+pyarrow
+networkx
+requests
+sentence-transformers==2.7.0
+torch
+transformers
+openai
