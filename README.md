@@ -154,6 +154,9 @@ print(agent.process("My name is Krishna."))
 
 # Ask something later → ReCALL Lite retrieves stored memory automatically
 print(agent.process("What is my name?"))
+
+mem.save()
+print("\nMemory saved.")
 ```
 
 
