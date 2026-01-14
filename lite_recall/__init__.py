@@ -3,7 +3,7 @@ ReCALL Lite
 A lightweight, AGI-inspired memory layer for LLMs.
 """
 
-# Expose main classes for easy import
+# Expose main classes for easy import and usage
 from .recall_core import (
     recall_lite,
     LiteAgent,
